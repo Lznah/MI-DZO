@@ -1,6 +1,6 @@
 import argparse
 
-parser = argparse.ArgumentParser(description='Process some integers.')
+parser = argparse.ArgumentParser()
 parser.add_argument('-g', type=int,
                     help='Gaussian blur')
 parser.add_argument('-m', type=int,

@@ -13,6 +13,12 @@ def magnitude_spectrum(im):
     return 20*np.log(np.abs(fshift))
 
 
-img = cv2.imread(args.path, 0)
+img = cv2.imread(args.path,0)
 m_img = magnitude_spectrum(img)
-cv2.imwrite('fourier_'+args.path+'.png', m_img)
+
+plt.suptitle('Noise compare', fontsize=16)
+plt.subplot(121),plt.imshow(img, cmap = 'gray')
+plt.title('Gaussian noise'), plt.xticks([]), plt.yticks([])
+plt.subplot(122),plt.imshow(m_img, cmap = 'gray')
+plt.title('Magnitude plane'), plt.xticks([]), plt.yticks([])
+plt.show()

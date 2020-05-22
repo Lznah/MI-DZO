@@ -2,10 +2,10 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-img = cv2.imread('gaussian_noise_rate30-butt.jpg',0)
-img2 = cv2.imread('normal_noise_rate30-butt.jpg',0)
-img3 = cv2.imread('monochromatic_normal_noise_rate30-butt.jpg',0)
-img4 = cv2.imread('monochromatic_gaussian_noise_rate30-butt.jpg',0)
+img = cv2.imread('gaussian_noise.jpg',0)
+img2 = cv2.imread('normal_noise.jpg',0)
+img3 = cv2.imread('monochromatic_normal_noise.jpg',0)
+img4 = cv2.imread('monochromatic_gaussian_noise.jpg',0)
 
 def magnitude_spectrum(im):
     f = np.fft.fft2(im)
@@ -27,4 +27,4 @@ plt.title('Monochromatic gaussian noise'), plt.xticks([]), plt.yticks([])
 plt.subplot(224),plt.imshow(m_img3, cmap = 'gray')
 plt.title('Monochromatic normal noise'), plt.xticks([]), plt.yticks([])
 #plt.show()
-plt.savefig("../results/noise_compare.png", dpi=300)
+plt.savefig("../results/noise_compare2.png", dpi=300)
